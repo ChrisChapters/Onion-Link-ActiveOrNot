@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Wiki Link Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hidden Wiki Link Checker</h1>
+
+    <form method="post">
+        <label for="web_address">Enter Link:</label>
+        <input type="text" name="web_address" placeholder="e.g., http://example.onion">
+
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <div id="result">{{ result }}</div>
+    {% endif %}
+
+</body>
+</html>
